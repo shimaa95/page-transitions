@@ -12,8 +12,9 @@ import SplitType from "split-type";
 
 gsap.registerPlugin(useGSAP)
 
-const info = () => {
-  const container = useRef(null)
+const Info = () => {
+  
+  const containerRef = useRef(null)
 
   useGSAP(
     () => {
@@ -41,13 +42,13 @@ const info = () => {
         if (text) text.revert()
       }
     },
-    { scope: container },
+    { scope: containerRef, dependencies: [] },
   )
 
 
   return (
     <ReactLenis root>
-    <div className="info" ref={container}>
+    <div className="info" ref={containerRef}>
       <div className="col">
         <Image src={img1} alt="img1" /></div>
       <div className="col">
@@ -65,4 +66,4 @@ const info = () => {
     </ReactLenis>
   );
 };  
-export default info;
+export default Info;
