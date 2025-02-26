@@ -53,7 +53,7 @@ body
     text-align: center;
     color: var(--copy);
     font-weight: bolder;
-    letter-spacing: -.5rem;
+
 
     line-height: 1;
 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
